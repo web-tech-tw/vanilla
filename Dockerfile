@@ -1,16 +1,31 @@
+# Vanilla
+#    ---
+# Directory based, virtual hosing manager and provider with PHP.
+#
+# (c) 2021 SuperSonic(https://github.com/supersonictw)
+
 FROM alpine:3.13
 
-COPY ./server /server
-COPY ./manage /manage
+# Copy Deploy Files
+COPY ./script/ /script
+COPY ./body /var/www/workplace
 
-ENV GIN_MODE release
+# Setup Requirement
+RUN sh /script/require.sh
+# Setup Nginx Gateway
+RUN bash /script/nginx.sh
+# Configure
+RUN bash /script/configure.sh
 
-RUN cd /server/cmd/heretics && go build
-RUN go clean -cache
+# Copy Default Configuration
+## Supervisor Config
+COPY ./configs/supervisord.conf /etc/supervisord.conf
+## NGINX Config
+COPY ./configs/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
 
-RUN cd /manage && npm install && npm run generate
-RUN npm cache clean --force
+# Clean
+RUN rm -rf /script
 
-ENTRYPOINT /app/cmd/heretics/heretics
-
-EXPOSE 8080
+# Set Entrypoint
+EXPOSE 80
+CMD supervisord

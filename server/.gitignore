@@ -12,3 +12,7 @@ logs/
 
 # Storages Directory
 storage/
+
+# Development
+.idea/
+pkg/
