@@ -1,6 +1,7 @@
 # Executable
 vhs
 vhs.exe
+!cmd/vhs
 
 # Config Files
 .env
