@@ -1,4 +1,4 @@
-// Virtual Host System - Server
+// Vanilla
 // (c)2021 SuperSonic (https://github.com/supersonictw)
 
 package auth
@@ -20,13 +20,17 @@ type Session struct {
 
 func (s *Session) Journalist(action string, target string) {
 	logRootPath := os.Getenv("LOG_DIRECTORY_PATH")
-	time := time.Now().Format("2006-01-02")
-	logPath := filepath.Join(logRootPath, fmt.Sprintf("%s.log", time))
+	timestamp := time.Now().Format("2006-01-02")
+	logPath := filepath.Join(logRootPath, fmt.Sprintf("%s.log", timestamp))
 	file, err := os.OpenFile(logPath, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	if err != nil {
 		panic(err)
 	}
-	defer file.Close()
+	defer func() {
+		if err := file.Close(); err != nil {
+			panic(err)
+		}
+	}()
 	actionCode := fmt.Sprintf("[%s]", action)
 	logger := log.New(file, actionCode, log.Ltime)
 	logger.Printf(

@@ -1,4 +1,4 @@
-// Package VHS: Virtual Host System - Server
+// Package VHS: Vanilla
 // (c)2021 SuperSonic (https://github.com/supersonictw)
 
 package main

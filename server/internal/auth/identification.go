@@ -1,4 +1,4 @@
-// Virtual Host System - Server
+// Vanilla
 // (c)2021 SuperSonic (https://github.com/supersonictw)
 
 package auth
