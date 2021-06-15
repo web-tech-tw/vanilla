@@ -5,13 +5,13 @@ package fs
 
 import (
 	"archive/zip"
-	"github.com/supersonictw/virtual_host-server/internal/auth"
+	"github.com/supersonictw/vanilla/server/internal/auth"
 	"io"
 	"os"
 	"path/filepath"
 	"strings"
 
-	"github.com/supersonictw/virtual_host-server/internal/user/fs/middleware"
+	"github.com/supersonictw/vanilla/server/internal/user/fs/middleware"
 )
 
 type Zip struct {

@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/supersonictw/virtual_host-server/internal/auth"
+	"github.com/supersonictw/vanilla/server/internal/auth"
 )
 
 func RefactorPathValidator(path string, identification *auth.Identification) bool {

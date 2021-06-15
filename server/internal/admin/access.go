@@ -5,7 +5,7 @@ package admin
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/supersonictw/virtual_host-server/internal/auth"
+	"github.com/supersonictw/vanilla/server/internal/auth"
 )
 
 func NewAccess(c *gin.Context) *auth.Session {

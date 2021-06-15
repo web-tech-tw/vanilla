@@ -7,7 +7,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/supersonictw/virtual_host-server/internal/auth"
+	"github.com/supersonictw/vanilla/server/internal/auth"
 )
 
 func FullPathExpression(path string, identification *auth.Identification) string {

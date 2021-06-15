@@ -8,8 +8,8 @@ import (
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
-	"github.com/supersonictw/virtual_host-server/internal/user"
-	"github.com/supersonictw/virtual_host-server/internal/user/fs"
+	"github.com/supersonictw/vanilla/server/internal/user"
+	"github.com/supersonictw/vanilla/server/internal/user/fs"
 	"net/http"
 	"os"
 )

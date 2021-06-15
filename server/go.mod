@@ -1,4 +1,4 @@
-module github.com/supersonictw/virtual_host-server
+module github.com/supersonictw/vanilla/server
 
 go 1.15
 

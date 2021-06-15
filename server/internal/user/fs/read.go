@@ -5,8 +5,8 @@ package fs
 
 import (
 	"encoding/base64"
-	"github.com/supersonictw/virtual_host-server/internal/auth"
-	"github.com/supersonictw/virtual_host-server/internal/user/fs/middleware"
+	"github.com/supersonictw/vanilla/server/internal/auth"
+	"github.com/supersonictw/vanilla/server/internal/user/fs/middleware"
 	"io/fs"
 	"io/ioutil"
 	"strings"

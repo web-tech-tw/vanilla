@@ -5,8 +5,8 @@ package user
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/supersonictw/virtual_host-server/internal/auth"
-	"github.com/supersonictw/virtual_host-server/internal/user/fs/middleware"
+	"github.com/supersonictw/vanilla/server/internal/auth"
+	"github.com/supersonictw/vanilla/server/internal/user/fs/middleware"
 )
 
 func NewAccess(c *gin.Context) *auth.Session {

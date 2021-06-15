@@ -8,7 +8,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/supersonictw/virtual_host-server/internal/auth"
+	"github.com/supersonictw/vanilla/server/internal/auth"
 )
 
 func UserDirectoryPrefix(identification *auth.Identification) string {
